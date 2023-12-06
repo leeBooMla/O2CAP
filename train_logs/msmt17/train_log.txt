@@ -1,0 +1,29 @@
+==========
+Args:Namespace(arch='resnet50_ibn', batch_size=32, data_dir='/data3/lpn/dataset/', dataset='msmt17', dropout=0, epochs=50, eps=0.5, eval_step=10, features=0, height=256, iters=400, k1=20, k2=6, logs_dir='train_logs/msmt17', lr=0.00035, momentum=0.2, num_instances=4, pool_type='gempool', print_freq=100, seed=1, step_size=20, temp=0.07, weight_decay=0.0005, width=128, workers=4)
+==========
+==> Load unlabeled dataset
+root path= /data3/lpn/dataset/msmt17
+Using downloaded file: /data3/lpn/dataset/msmt17/MSMT17_V1
+MSMT17 dataset loaded
+  subset   | # ids | # images
+  ---------------------------
+  train    |  1041 |    32621
+  query    |  3060 |    11659
+  gallery  |  3060 |    82161
+==> Create pseudo labels for unlabeled data with self-paced policy
+Extract Features: [100/1020]	Time 0.141 (0.226)	Data 0.000 (0.005)	
+Extract Features: [200/1020]	Time 0.136 (0.183)	Data 0.000 (0.003)	
+Extract Features: [300/1020]	Time 0.140 (0.169)	Data 0.000 (0.002)	
+Extract Features: [400/1020]	Time 0.125 (0.162)	Data 0.000 (0.002)	
+Extract Features: [500/1020]	Time 0.137 (0.157)	Data 0.000 (0.001)	
+Extract Features: [600/1020]	Time 0.133 (0.154)	Data 0.000 (0.001)	
+Extract Features: [700/1020]	Time 0.287 (0.152)	Data 0.000 (0.001)	
+Extract Features: [800/1020]	Time 0.149 (0.151)	Data 0.000 (0.001)	
+Extract Features: [900/1020]	Time 0.132 (0.150)	Data 0.000 (0.001)	
+Extract Features: [1000/1020]	Time 0.125 (0.150)	Data 0.000 (0.001)	
+Computing jaccard distance...
+Jaccard distance computing time cost: 60.40020990371704
+Clustering criterion: eps: 0.500
+==> Statistics for epoch 0: 1122 clusters, 1296 sub-clusters, 23775 un-clustered instances
+  initializing proxy memory feature with shape torch.Size([1296, 2048])...
+Epoch: [0][100/400]	Time 1.952 (2.031)	Data 0.000 (0.002)	Loss 56.308 (53.470)
